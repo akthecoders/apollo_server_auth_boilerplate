@@ -4,11 +4,6 @@ module.exports = {
       const { userId } = context;
       const userDetails = await context.userModel.getUserDetails(userId);
       return userDetails;
-    },
-    login: async (_, incomingData, context) => {
-      const { email, password } = incomingData;
-      const token = await context.userModel.authenticateUser(email, password);
-      return { token };
     }
   },
   Mutation: {
@@ -26,6 +21,11 @@ module.exports = {
       const { userId } = context;
       const user = await context.userModel.deleteUser(userId);
       return user;
+    },
+    login: async (_, incomingData, context) => {
+      const { email, password } = incomingData;
+      const token = await context.userModel.authenticateUser(email, password);
+      return { token };
     }
   }
 };

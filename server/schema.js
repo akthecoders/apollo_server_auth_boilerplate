@@ -11,7 +11,6 @@ const typeDefs = gql`
 
   type Query {
     me: User
-    login(email: String!, password: String!): token
   }
 
   type token {
@@ -26,6 +25,7 @@ const typeDefs = gql`
       email: String!
     ): token
     deleteUser: User
+    login(email: String!, password: String!): token
   }
 `;
 
