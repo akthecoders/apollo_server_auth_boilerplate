@@ -11,4 +11,4 @@ Starter code for having basic of user registration, login, delete.
   
   npm run client - To run just the client at http://localhost:3000.
 
-  npm run dev - To run both server and client concurrently at the above server
+  npm run dev - To run both server and client concurrently at the above server.
